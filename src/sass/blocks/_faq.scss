@@ -1,0 +1,101 @@
+.faq {
+    padding-top: 147px;
+    background: #000;
+    &__title {
+        margin-bottom: 70px;
+    }
+    &__box {
+        max-width: 1212px;
+        width: 100%;
+        margin: 0 auto 45px;
+    }
+
+    &__item {
+        overflow: hidden;
+        margin-bottom: 20px;
+        border-radius: 25px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &--active {
+            .faq__item__text {
+                height: auto;
+                font-family: 'Roboto Regular', sans-serif;
+                font-weight: 400;
+                padding-top: 13px;
+                padding-bottom: 12px;
+                font-size: 22px;
+                line-height: 26px;
+                color: #212121;
+            }
+
+            .faq__item-arrow {
+                position: absolute;
+                top: 30%;
+                right: 29px;
+                transform: translateY(-50%);
+                transform: rotate(180deg);
+                transition: all .3s;
+            }
+        }
+    }
+
+    &__item__title {
+        position: relative;
+        font-size: 28px;
+        color: #fff;
+        padding: 38px 100px 38px 121px;
+        border-radius: 15px;
+        border: 1px solid rgba(93, 93, 93, 0.20);
+        background: rgba(217, 217, 217, 0.10);
+        backdrop-filter: blur(7.5px);
+        cursor: pointer;
+        transition: .3s;
+    }
+
+    &__item__text {
+        height: 0;
+        padding-left: 44px;
+        padding-right: 13px;
+        font-size: 22px;
+        line-height: 26px;
+        transition: .3s;
+        li {
+            position: relative;
+            color: #fff;
+            padding-left: 20px;
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 5px;
+                height: 5px;
+                background: #fff;
+                border-radius: 100%;
+            }
+        }
+    }
+
+    &__item-arrow {
+        position: absolute;
+        top: 50%;
+        right: 29px;
+        transform: translateY(-50%);
+    }
+
+    &__item-icon {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 36px;
+    }
+    &__button {
+        width: 296px;
+        height: 55px;
+        display: block;
+        margin: 0 auto;
+    }
+}

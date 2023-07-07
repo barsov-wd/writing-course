@@ -1,0 +1,34 @@
+.features {
+    padding-top: 70px;
+    background: #000;
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding-left: 39px;
+        width: 322px;
+        height: 125px;
+        background: url('../img/features/item-bg.png') center (center / cover) no-repeat;
+        &::before {
+            content: '';
+            position: absolute;
+            left: -23px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 45px;
+            height: 45px;
+            background: url('../img/features/icon-before.svg') no-repeat;
+        }
+    }
+    &__item-text {
+        max-width: 275px;
+        width: 100%;
+        color: #fff;
+        font-size: 22px;
+    }
+}

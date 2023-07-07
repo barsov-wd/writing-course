@@ -1,0 +1,91 @@
+.header {
+    background: #000 url('../img/header/bg.png') right no-repeat;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 25px;
+    }
+    &__menu {
+        display: flex;
+        column-gap: 40px;
+    }
+
+    &__menu-item {
+        position: relative;
+        &::after {
+            content: "";
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            transition: .3s;
+            left: 0;
+            bottom: -5px;
+            width: 100%;
+            height: 3px;
+            background: radial-gradient(100% 100% at 50% 50%, #DA3A30 0%, rgba(225, 56, 46, 0.798958) 20.1%, rgba(254, 49, 36, 0) 100%);
+            background-blend-mode: color-dodge;
+            mix-blend-mode: hard-light;
+            border-radius: 50%;
+        }
+        &:hover {
+            &::after {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+    &__menu-link {
+        font-size: 14px;
+        line-height: 18px;
+        color: #fff;
+        letter-spacing: 2px;
+        transition: all .3s;
+        text-transform: uppercase;
+    }
+    &__button {
+        padding-top: 19px;
+        width: 283px;
+        height: 55px;
+    }
+    &__promo {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 94px;
+    }
+    &__promo-content {
+        padding-top: 94px;
+    }
+    &__promo-title {
+        max-width: 947px;
+        width: 100%;
+        margin-bottom: 25px;
+        color: #fff;
+        font-size: 75px;
+        line-height: 96px;
+        text-transform: uppercase;
+        font-family: 'MakLight', arial;
+        font-weight: 300;
+    }
+    &__promo-text {
+        max-width: 865px;
+        width: 100%;
+        color: #fff;
+        font-size: 35px;
+        margin-bottom: 40px;
+    }
+    &__promo-button {
+        width: 296px;
+        height: 55px;
+    }
+    &__promo-image {
+        margin-right: 35px;
+    }
+    &__burger {
+        display: none;
+    }
+    &__promo-image-mobile {
+        display: none;
+    }
+}

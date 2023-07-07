@@ -1,0 +1,130 @@
+.modal {
+    position: fixed;
+    z-index: 199;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    overflow: auto;
+    background: rgba(45, 45, 45, 0.6);
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+
+    &--active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__container {
+        min-height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 10px;
+    }
+
+    &-main__dialog {
+        position: relative;
+        max-width: 1060px;
+        width: 100%;
+        min-height: 516px;
+        position: relative;
+        text-align: center;
+        padding-top: 81px;
+        border-radius: 20px;
+        border: 3px solid var(--red, #DA3A30);
+        background: #010101;
+    }
+
+    &-main__close {
+        position: absolute;
+        top: 30px;
+        right: 33px;
+        cursor: pointer;
+    }
+
+    &-main__title {
+        font-size: 45px;
+        color: #fff;
+        width: 760px;
+        margin: 0 auto 45px;
+    }
+
+
+    &-main__input-group {
+        width: 560px;
+        margin: 0 auto 15px;
+        &:last-child {
+            margin: 0 auto 20px;
+        }
+    }
+
+    &-main__input {
+        font-family: 'Montserrat Medium', sans-serif;
+        font-weight: 500;
+        width: 100%;
+        height: 55px;
+        border: none;
+        border-radius: 10px;
+        border: 1px solid #FFF;
+        background: rgba(217, 217, 217, 0.10);
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+        font-size: 20px;
+        padding: 0 14px;
+        color: rgba(255, 255, 255, 0.50);
+
+        &::placeholder {
+            color: rgba(255, 255, 255, 0.50);
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &-main__button {
+        width: 560px;
+        height: 55px;
+    }
+
+    &-thanks__dialog {
+        position: relative;
+        max-width: 1060px;
+        width: 100%;
+        height: 516px;
+        position: relative;
+        text-align: center;
+        border-radius: 20px;
+        padding-top: 180px;
+        border: 3px solid var(--red, #DA3A30);
+        background: #010101;
+    }
+
+    &-thanks__close {
+        position: absolute;
+        top: 30px;
+        right: 33px;
+        cursor: pointer;
+    }
+
+    &-thanks__title {
+        font-size: 45px;
+        color: #fff;
+        margin-bottom: 25px;
+    }
+
+    &-thanks__text {
+        font-size: 32px;
+        color: #fff;
+        width: 570px;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
